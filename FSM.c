@@ -32,7 +32,6 @@ uint32_t Input; //entrada
 int main (void){
 Configurar_PLL(); //configuracion de velocidad de reloj
 Configurar_GPIO();
-SysTick_Init();
   
   S=  N; 
   while(1)
@@ -40,7 +39,6 @@ SysTick_Init();
     luz=FSM[S].Out;
     Input=sensor; 
     S= FSM[S].Next[Input]; 
-    SysTick_Wait10ms(FSM[S].Time)
   }
 }
 
