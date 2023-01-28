@@ -10,12 +10,18 @@
 // fvoc = fin * MDIV
 //      = 5MHz * 96.00 = 480MHz
 // fsyclk = fvco / (PSYSDIV + 1)
-//        = 480 / (3 + 1 ) = 120MHz
-#define MINT    96
+//        = 480 / (3 + 1 ) = 120MHz 80M
+
+//TM4C1294xl con un cristal de 16 MHz para que funcione a 80MHz 
+//fin= 16MHz / [(0+1)*(4+1)]=3.2MHz
+//fvoc=3.2Mhz * 150 =480Mhz
+//fsyclk=480/(5+1)=80MHz 
+
+#define MINT    150
 #define MFRAC   0
 #define N       4
 #define Q       0
-#define PSYSDIV 3
+#define PSYSDIV 5
  
 #define FBCHT   0x6
 #define EBCHT   0x6
