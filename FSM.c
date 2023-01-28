@@ -30,7 +30,7 @@ uint32_t S;  //para el estado actual
 uint32_t Input; //entrada 
 
 int main (void){
-Configurar_PLL(); //configuracion de velocidad de reloj
+Configurar_PLL(); //configuracion de velocidad de reloj a 80 MHz 
 Configurar_GPIO();
   
   S=  N; 

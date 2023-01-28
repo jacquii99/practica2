@@ -31,7 +31,7 @@
 #define EWS     0x5
 #define MB1     0x00100010
  
-void SetSystemClock_120MHz()
+void SetSystemClock_80MHz()
 {
     // 1. Configurar el rango del oscilador MOSC al rango de alta frecuencia
     SYSCTL->MOSCCTL |= 1 << 4;          // cristal conectado a 10MHZ
@@ -65,7 +65,7 @@ void SetSystemClock_120MHz()
  
 int main()
 {
-    SetSystemClock_120MHz();
+    SetSystemClock_80MHz();
     // Place your application code here
      
 }
